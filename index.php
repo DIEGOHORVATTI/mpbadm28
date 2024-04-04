@@ -6,9 +6,9 @@ if (!function_exists("GetSQLValueString")) {
   function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
   {
 
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+    // $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+    $theValue = function_exists("mysql_real_escape_string") ? mb_strtolower($theValue) : strtolower($theValue);
 
-    $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
     switch ($theType) {
       case "text":
         $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
@@ -31,71 +31,64 @@ if (!function_exists("GetSQLValueString")) {
   }
 }
 
-mysql_select_db($database_banco1, $banco1);
+$databaseConnection = $conn;
+
 $query_rsEquipe = "SELECT * FROM equipe";
-$rsEquipe = mysql_query($query_rsEquipe, $banco1) or die(mysql_error());
-$row_rsEquipe = mysql_fetch_assoc($rsEquipe);
-$totalRows_rsEquipe = mysql_num_rows($rsEquipe);
+$rsEquipe = $databaseConnection->query($query_rsEquipe) or die($databaseConnection->getError());
+$row_rsEquipe = $rsEquipe->fetch_assoc();
+$totalRows_rsEquipe = $rsEquipe->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsBanner = "SELECT * FROM banner WHERE local = 'Slide'";
-$rsBanner = mysql_query($query_rsBanner, $banco1) or die(mysql_error());
-$row_rsBanner = mysql_fetch_assoc($rsBanner);
-$totalRows_rsBanner = mysql_num_rows($rsBanner);
+$rsBanner = $databaseConnection->query($query_rsBanner) or die($databaseConnection->getError());
+$row_rsBanner = $rsBanner->fetch_assoc();
+$totalRows_rsBanner = $rsBanner->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsEstrutura = "SELECT * FROM banner WHERE `local` = 'Estrutura'";
-$rsEstrutura = mysql_query($query_rsEstrutura, $banco1) or die(mysql_error());
-$row_rsEstrutura = mysql_fetch_assoc($rsEstrutura);
-$totalRows_rsEstrutura = mysql_num_rows($rsEstrutura);
+$rsEstrutura = $databaseConnection->query($query_rsEstrutura) or die($databaseConnection->getError());
+$row_rsEstrutura = $rsEstrutura->fetch_assoc();
+$totalRows_rsEstrutura = $rsEstrutura->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsNoticias = "SELECT * FROM noticia ORDER BY codigo DESC LIMIT 3";
-$rsNoticias = mysql_query($query_rsNoticias, $banco1) or die(mysql_error());
-$row_rsNoticias = mysql_fetch_assoc($rsNoticias);
-$totalRows_rsNoticias = mysql_num_rows($rsNoticias);
+$rsNoticias = $databaseConnection->query($query_rsNoticias) or die($databaseConnection->getError());
+$row_rsNoticias = $rsNoticias->fetch_assoc();
+$totalRows_rsNoticias = $rsNoticias->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsDepoimento = "SELECT * FROM depoimento";
-$rsDepoimento = mysql_query($query_rsDepoimento, $banco1) or die(mysql_error());
-$row_rsDepoimento = mysql_fetch_assoc($rsDepoimento);
-$totalRows_rsDepoimento = mysql_num_rows($rsDepoimento);
+$rsDepoimento = $databaseConnection->query($query_rsDepoimento) or die($databaseConnection->getError());
+$row_rsDepoimento = $rsDepoimento->fetch_assoc();
+$totalRows_rsDepoimento = $rsDepoimento->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsQuem1 = "SELECT * FROM institucional WHERE codigo = 1";
-$rsQuem1 = mysql_query($query_rsQuem1, $banco1) or die(mysql_error());
-$row_rsQuem1 = mysql_fetch_assoc($rsQuem1);
-$totalRows_rsQuem1 = mysql_num_rows($rsQuem1);
+$rsQuem1 = $databaseConnection->query($query_rsQuem1) or die($databaseConnection->getError());
+$row_rsQuem1 = $rsQuem1->fetch_assoc();
+$totalRows_rsQuem1 = $rsQuem1->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsQuem2 = "SELECT * FROM institucional WHERE codigo > 1";
-$rsQuem2 = mysql_query($query_rsQuem2, $banco1) or die(mysql_error());
-$row_rsQuem2 = mysql_fetch_assoc($rsQuem2);
-$totalRows_rsQuem2 = mysql_num_rows($rsQuem2);
+$rsQuem2 = $databaseConnection->query($query_rsQuem2) or die($databaseConnection->getError());
+$row_rsQuem2 = $rsQuem2->fetch_assoc();
+$totalRows_rsQuem2 = $rsQuem2->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsComarca = "SELECT falencia.comerca FROM falencia WHERE tipo = 'Falencia' GROUP BY falencia.comerca";
-$rsComarca = mysql_query($query_rsComarca, $banco1) or die(mysql_error());
-$row_rsComarca = mysql_fetch_assoc($rsComarca);
-$totalRows_rsComarca = mysql_num_rows($rsComarca);
+$rsComarca = $databaseConnection->query($query_rsComarca) or die($databaseConnection->getError());
+$row_rsComarca = $rsComarca->fetch_assoc();
+$totalRows_rsComarca = $rsComarca->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsMassa = "SELECT falencia.empresa FROM falencia WHERE tipo = 'Falencia' GROUP BY falencia.empresa";
-$rsMassa = mysql_query($query_rsMassa, $banco1) or die(mysql_error());
-$row_rsMassa = mysql_fetch_assoc($rsMassa);
-$totalRows_rsMassa = mysql_num_rows($rsMassa);
+$rsMassa = $databaseConnection->query($query_rsMassa) or die($databaseConnection->getError());
+$row_rsMassa = $rsMassa->fetch_assoc();
+$totalRows_rsMassa = $rsMassa->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsComarca2 = "SELECT falencia.comerca FROM falencia WHERE tipo = 'RJ' GROUP BY falencia.comerca";
-$rsComarca2 = mysql_query($query_rsComarca2, $banco1) or die(mysql_error());
-$row_rsComarca2 = mysql_fetch_assoc($rsComarca2);
-$totalRows_rsComarca2 = mysql_num_rows($rsComarca2);
+$rsComarca2 = $databaseConnection->query($query_rsComarca2) or die($databaseConnection->getError());
+$row_rsComarca2 = $rsComarca2->fetch_assoc();
+$totalRows_rsComarca2 = $rsComarca2->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsMassa2 = "SELECT falencia.empresa FROM falencia WHERE tipo = 'RJ' GROUP BY falencia.empresa";
-$rsMassa2 = mysql_query($query_rsMassa2, $banco1) or die(mysql_error());
-$row_rsMassa2 = mysql_fetch_assoc($rsMassa2);
-$totalRows_rsMassa2 = mysql_num_rows($rsMassa2);
+$rsMassa2 = $databaseConnection->query($query_rsMassa2) or die($databaseConnection->getError());
+$row_rsMassa2 = $rsMassa2->fetch_assoc();
+$totalRows_rsMassa2 = $rsMassa2->num_rows;
+
+$databaseConnection->close();
 ?>
 
 <!doctype html>
@@ -146,9 +139,9 @@ $totalRows_rsMassa2 = mysql_num_rows($rsMassa2);
 
   <div id="preloader"></div>
 
-  <?php include("topo.php") ?>
+  <!-- <?php include("topo.php") ?>
 
-  <?php include("slide.php") ?>
+  <?php include("slide.php") ?> -->
 
   <p>
   <div class="container">
@@ -171,11 +164,11 @@ $totalRows_rsMassa2 = mysql_num_rows($rsMassa2);
         <h5 align="center">Recupera&ccedil;&atilde;o Judicial</h5>
       </td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td><?php include("chama_falencias.php"); ?></td>
       <td>&nbsp;</td>
       <td><?php include("chama_rj.php"); ?></td>
-    </tr>
+    </tr> -->
   </table>
   <p>&nbsp;</p><br /><br />
   <div class="container">
@@ -212,7 +205,7 @@ $totalRows_rsMassa2 = mysql_num_rows($rsMassa2);
             </div>
             <!-- End single blog -->
 
-          <?php } while ($row_rsNoticias = mysql_fetch_assoc($rsNoticias)); ?>
+            <!-- <?php } while ($row_rsNoticias = $rsNoticias->fetch_assoc()); ?> -->
 
         </div>
       </div>
@@ -256,8 +249,3 @@ $totalRows_rsMassa2 = mysql_num_rows($rsMassa2);
 </body>
 
 </html>
-<?php
-mysql_free_result($rsEquipe);
-mysql_free_result($rsEstrutura);
-mysql_free_result($rsDepoimento);
-?>
