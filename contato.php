@@ -1,8 +1,6 @@
 <?php require_once('Connections/banco1.php'); ?>
 
 <?php
-
-
 if (!function_exists("GetSQLValueString")) {
   function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
   {
@@ -55,7 +53,7 @@ $totalRows_rsQuem2 = $rsQuem2->num_rows;
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="arquivos/img/favicon.ico">
 
   <!-- bootstrap v3.3.6 css -->
   <link rel="stylesheet" href="arquivos/css/bootstrap.min.css">
