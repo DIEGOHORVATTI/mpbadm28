@@ -3,8 +3,6 @@
 <?php
 
 if (!function_exists("GetSQLValueString")) {
-  print("function_exists index.php");
-
   function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
   {
 
@@ -128,7 +126,6 @@ $conn->close();
 
   <!-- modernizr css -->
   <script src="arquivos/js/vendor/modernizr-2.8.3.min.js"></script>
-
 </head>
 
 <body>
@@ -180,6 +177,8 @@ $conn->close();
       </div>
     </div>
   </div><br />
+
+  <h1>noticias</h1>
 
   <!--Blog Area Start-->
   <div class="blog-page-area">
