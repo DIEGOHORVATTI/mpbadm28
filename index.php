@@ -163,11 +163,11 @@ $conn->close();
         <h5 align="center">Recupera&ccedil;&atilde;o Judicial</h5>
       </td>
     </tr>
-    <!-- <tr>
+    <tr>
       <td><?php include("chama_falencias.php"); ?></td>
       <td>&nbsp;</td>
       <td><?php include("chama_rj.php"); ?></td>
-    </tr> -->
+    </tr>
   </table>
   <p>&nbsp;</p><br /><br />
   <div class="container">
