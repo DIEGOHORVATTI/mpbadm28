@@ -1,34 +1,34 @@
-2<?php
-  ini_set('display_errors', 0);
-  error_reporting(0);
+<?php
+ini_set('display_errors', 0);
+error_reporting(0);
 
-  class Connection
+class Connection
+{
+  private $server = "localhost";
+  private $username = "mpbadm28_mpb";
+  private $password = "mpb@#admjudicial";
+  private $db = "mpbadm28_mpbadmjudicial";
+
+  public function connect()
   {
-    private $server = "localhost";
-    private $username = "mpbadm28_mpb";
-    private $password = "mpb@#admjudicial";
-    private $db = "mpbadm28_mpbadmjudicial";
+    $banco1 = mysqli_connect($this->server, $this->username, $this->password, $this->db);
 
-    public function connect()
-    {
-      $banco1 = mysqli_connect($this->server, $this->username, $this->password, $this->db);
-
-      if (mysqli_connect_errno()) {
-        return print("Falha na conexão com o banco de dados: ");
-      }
-
-      print("Conexão realizada com sucesso Conections/banco1.php!");
-
-      mysqli_set_charset($banco1, "utf8");
-      return $banco1;
+    if (mysqli_connect_errno()) {
+      return print("Falha na conexão com o banco de dados: ");
     }
 
-    public function query($sql)
-    {
-      return mysqli_query($this->connect(), $sql);
-    }
+    print("Conexão realizada com sucesso Conections/banco1.php!");
+
+    mysqli_set_charset($banco1, "utf8");
+    return $banco1;
   }
 
-  $banco1 = new Connection();
+  public function query($sql)
+  {
+    return mysqli_query($this->connect(), $sql);
+  }
+}
 
-  $banco1->connect();
+$banco1 = new Connection();
+
+$banco1->connect();
