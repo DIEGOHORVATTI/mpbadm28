@@ -17,7 +17,7 @@ class Connection
       return print("Falha na conexão com o banco de dados: ");
     }
 
-    print("Conexão realizada com sucesso Conections/banco1.php!");
+    // ("Conexão realizada com sucesso Conections/banco1.php!");
 
     mysqli_set_charset($conn, "utf8");
     return $conn;
