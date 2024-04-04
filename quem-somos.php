@@ -1,4 +1,5 @@
 <?php require_once('Connections/banco1.php'); ?>
+
 <?php
 if (!function_exists("GetSQLValueString")) {
   function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
@@ -26,19 +27,23 @@ if (!function_exists("GetSQLValueString")) {
     return $theValue;
   }
 }
+$query_rsEquipe = "SELECT * FROM equipe";
+$rsEquipe = $conn->query($query_rsEquipe) or die($conn->getError());
+$row_rsEquipe = $rsEquipe->fetch_assoc();
+$totalRows_rsEquipe = $rsEquipe->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
+
 $query_rsQuem1 = "SELECT * FROM institucional WHERE codigo = 1";
-$rsQuem1 = mysql_query($query_rsQuem1, $banco1) or die(mysql_error());
-$row_rsQuem1 = mysql_fetch_assoc($rsQuem1);
-$totalRows_rsQuem1 = mysql_num_rows($rsQuem1);
+$rsQuem1 = $conn->query($query_rsQuem1) or die($conn->getError());
+$row_rsQuem1 = $rsQuem1->fetch_assoc();
+$totalRows_rsQuem1 = $rsQuem1->num_rows;
 
-mysql_select_db($database_banco1, $banco1);
 $query_rsQuem2 = "SELECT * FROM institucional WHERE codigo > 1";
-$rsQuem2 = mysql_query($query_rsQuem2, $banco1) or die(mysql_error());
-$row_rsQuem2 = mysql_fetch_assoc($rsQuem2);
-$totalRows_rsQuem2 = mysql_num_rows($rsQuem2);
+$rsQuem2 = $conn->query($query_rsQuem2) or die($conn->getError());
+$row_rsQuem2 = $rsQuem2->fetch_assoc();
+$totalRows_rsQuem2 = $rsQuem2->num_rows;
 ?>
+
 <!doctype html>
 <html class="no-js" lang="pt-BR">
 
@@ -87,7 +92,8 @@ $totalRows_rsQuem2 = mysql_num_rows($rsQuem2);
 
   <?php include("topo.php") ?>
   <!-- Start breadcumb Area -->
-  <div class="page-area"><br /><br /><br /><br /><br />
+  <div class="page-area">
+    <br /><br /><br /><br /><br />
     <div class="breadcumb-overlay"></div>
     <div class="container">
       <div class="row">
@@ -101,23 +107,20 @@ $totalRows_rsQuem2 = mysql_num_rows($rsQuem2);
       </div>
     </div>
   </div>
-  <!-- End breadcumb Area -->
+
   <!-- about-area start -->
   <div class="about-area page-padding">
     <div class="container">
       <div class="row">
-        <!-- column end -->
         <div>
           <div class="about-content">
             <h3 align="center"><?php echo $row_rsQuem1['titulo']; ?></h3>
             <p><img src="up/<?php echo $row_rsQuem1['imagem']; ?>" alt="" width="100%" height="250" align="left" style=" margin-right:10px; max-width:450px"><?php echo $row_rsQuem1['descricao']; ?></p>
           </div>
         </div>
-        <!-- column end -->
       </div>
     </div>
   </div>
-  <!-- about-area end -->
 
   <!--End of Blog Area-->
   <?php include("rodape.php") ?>
@@ -153,6 +156,3 @@ $totalRows_rsQuem2 = mysql_num_rows($rsQuem2);
 </body>
 
 </html>
-<?php
-mysql_free_result($rsQuem1);
-?>
