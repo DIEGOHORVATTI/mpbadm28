@@ -3,6 +3,8 @@
 <?php
 
 if (!function_exists("GetSQLValueString")) {
+  print("function_exists index.php");
+
   function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
   {
 
