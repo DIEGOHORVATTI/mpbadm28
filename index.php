@@ -89,7 +89,6 @@ $totalRows_rsMassa2 = $rsMassa2->num_rows;
 $conn->close();
 ?>
 
-
 <!doctype html>
 <html class="no-js" lang="pt-BR">
 
@@ -204,7 +203,7 @@ $conn->close();
             </div>
             <!-- End single blog -->
 
-            <!-- <?php } while ($row_rsNoticias = $rsNoticias->fetch_assoc()); ?> -->
+          <?php } while ($row_rsNoticias = $rsNoticias->fetch_assoc()); ?>
 
         </div>
       </div>
