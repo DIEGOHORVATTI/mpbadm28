@@ -1,31 +1,20 @@
+<?php require_once('banco1.php'); ?>
+
 <?php
-class Connection
-{
-  private $server = "localhost";
-  private $username = "mpbadm28_mpb";
-  private $password = "mpb@#admjudicial";
-  private $db = "mpbadm28_mpbadmjudicial";
 
-  public function connect()
-  {
-    $connection = mysqli_connect($this->server, $this->username, $this->password, $this->db);
-
-    if (mysqli_connect_errno()) {
-      return print("Falha na conexão com o banco de dados: ");
-    }
-
-    print("Conexão realizada com sucesso!");
-
-    mysqli_set_charset($connection, "utf8");
-    return $connection;
+$connection = "SELECT * FROM equipe";
+$result = $conn->query($connection);
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"] . " - Nome: " . $row["nome"] . " - Função: " . $row["funcao"] . "<br>";
   }
+} else {
+  echo "0 results";
 }
-
-$connection = new Connection();
-
-$connection->connect();
+$conn->close();
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +28,7 @@ $connection->connect();
 <body>
   <h2>Dados da Equipe:</h2>
 
-  <h4>kapa 10</h4>
+  <h4>kapa 12</h4>
 
 </body>
 
