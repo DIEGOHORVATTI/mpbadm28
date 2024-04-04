@@ -1,16 +1,20 @@
 <?php require_once('Connections/banco1.php'); ?>
 
 <?php
-print('-Example query-');
+print('-Falencia_documentos-');
 
 $sql = "SELECT * FROM falencia_documentos";
 $result = $banco1->query($sql);
 
+$data = array();
 while ($row = mysqli_fetch_assoc($result)) {
-  print_r($row);
+  $data[] = $row;
 }
-?>
 
+$json_output = json_encode($data, JSON_PRETTY_PRINT);
+
+echo '<pre>' . $json_output . '</pre>';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
