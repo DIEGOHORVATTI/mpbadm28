@@ -1,5 +1,17 @@
 <?php require_once('Connections/banco1.php'); ?>
 
+<?php
+print('-Example query-');
+
+$sql = "SELECT * FROM falencia_documentos";
+$result = $banco1->query($sql);
+
+while ($row = mysqli_fetch_assoc($result)) {
+  print_r($row);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +24,7 @@
 <body>
   <h2>Dados da Equipe:</h2>
 
-  <h4>kapa 12</h4>
+  <h4>kapa 11</h4>
 
 </body>
 
