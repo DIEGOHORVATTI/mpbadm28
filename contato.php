@@ -1,33 +1,8 @@
 <?php require_once('Connections/banco1.php'); ?>
 
+<?php require_once('./getSQLValueString.php'); ?>
+
 <?php
-if (!function_exists("GetSQLValueString")) {
-  function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
-  {
-    $theValue = function_exists("mysql_real_escape_string") ? mb_strtolower($theValue) : strtolower($theValue);
-
-    switch ($theType) {
-      case "text":
-        $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-        break;
-      case "long":
-      case "int":
-        $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-        break;
-      case "double":
-        $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
-        break;
-      case "date":
-        $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-        break;
-      case "defined":
-        $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-        break;
-    }
-    return $theValue;
-  }
-}
-
 $query_rsQuem1 = "SELECT * FROM institucional WHERE codigo = 1";
 $rsQuem1 = $conn->query($query_rsQuem1) or die($conn->getError());
 $row_rsQuem1 = $rsQuem1->fetch_assoc();
@@ -53,7 +28,7 @@ $totalRows_rsQuem2 = $rsQuem2->num_rows;
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="arquivos/img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
   <!-- bootstrap v3.3.6 css -->
   <link rel="stylesheet" href="arquivos/css/bootstrap.min.css">
