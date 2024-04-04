@@ -1,0 +1,85 @@
+[03-Apr-2024 19:30:03 America/Fortaleza] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:30:03 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:10
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(10): mysqli->__construct('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:30:20 America/Fortaleza] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:30:20 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:10
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(10): mysqli->__construct('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:30:59 America/Fortaleza] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:30:59 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:10
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(10): mysqli->__construct('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:31:38 America/Fortaleza] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:31:38 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:10
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(10): mysqli->__construct('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:32:32 America/Fortaleza] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:32:32 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:10
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(10): mysqli->__construct('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 19:33:24 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:24 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:27 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:27 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:45 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:45 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:47 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:33:47 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:34:15 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:34:15 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:34:16 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 19:34:16 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 21:27:26 America/Fortaleza] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 21:27:26 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for http failed: Name or service not known in /home2/mpbadm28/public_html/lol.php:11
+Stack trace:
+#0 /home2/mpbadm28/public_html/lol.php(11): mysqli_connect('http://mpbadmju...', 'mpbadm28_mpb', Object(SensitiveParameterValue), 'mpbadm28_mpbadm...')
+#1 /home2/mpbadm28/public_html/lol.php(30): Connection->connect()
+#2 {main}
+  thrown in /home2/mpbadm28/public_html/lol.php on line 11
+[03-Apr-2024 23:03:48 America/Fortaleza] PHP Parse error:  syntax error, unexpected identifier "sprintf" in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 23:03:50 America/Fortaleza] PHP Parse error:  syntax error, unexpected identifier "sprintf" in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 23:03:51 America/Fortaleza] PHP Parse error:  syntax error, unexpected identifier "sprintf" in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 23:04:01 America/Fortaleza] PHP Parse error:  syntax error, unexpected identifier "sprintf" in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 23:04:08 America/Fortaleza] PHP Parse error:  syntax error, unexpected identifier "sprintf" in /home2/mpbadm28/public_html/lol.php on line 10
+[03-Apr-2024 23:04:10 America/Fortaleza] PHP Parse error:  syntax error, unexpected identifier "sprintf" in /home2/mpbadm28/public_html/lol.php on line 10
