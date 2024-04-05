@@ -1,13 +1,4 @@
-<?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php';
-
-require_once('Connections/banco1.php');
-?>
+<?php require_once('Connections/banco1.php'); ?>
 
 <h2>mailer a baixo</h2>
 
@@ -17,7 +8,7 @@ require_once('Connections/banco1.php');
 
 
 print("<h2>mailer a baixo2</h2>");
-$mail = new PHPMailer(true);
+// $mail = new PHPMailer(true);
 ?>
 
 <?php
