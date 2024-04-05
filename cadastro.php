@@ -1,5 +1,7 @@
 <?php require_once('Connections/banco1.php'); ?>
 
+<?php require_once('./getSQLValueString.php'); ?>
+
 <!doctype html>
 <html class="no-js" lang="pt-BR">
 
@@ -39,11 +41,12 @@
 
 <body>
   <!--[if lt IE 8]>
-              <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-            <![endif]-->
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
   <?php include("topo.php") ?>
   <!-- Start breadcumb Area -->
-  <div class="page-area"><br /><br /><br /><br /><br />
+  <div class="page-area">
+    <br /><br /><br /><br /><br />
     <div class="breadcumb-overlay"></div>
     <div class="container">
       <div class="row">
@@ -57,7 +60,7 @@
       </div>
     </div>
   </div>
-  <!-- End breadcumb Area -->
+
   <!-- about-area start -->
   <div class="about-area page-padding">
     <div class="container">
