@@ -1,37 +1,8 @@
 <?php require_once('Connections/banco1.php'); ?>
 
+<?php require_once('./getSQLValueString.php'); ?>
+
 <?php
-if (!function_exists("GetSQLValueString")) {
-  print("function_exists chama_falencias");
-
-  function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
-  {
-
-    // $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-    $theValue = function_exists("mysql_real_escape_string") ? mb_strtolower($theValue) : strtolower($theValue);
-
-    switch ($theType) {
-      case "text":
-        $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-        break;
-      case "long":
-      case "int":
-        $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-        break;
-      case "double":
-        $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
-        break;
-      case "date":
-        $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-        break;
-      case "defined":
-        $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-        break;
-    }
-    return $theValue;
-  }
-}
-
 $query_rsComarca = "SELECT falencia.comerca FROM falencia WHERE tipo = 'Falencia' GROUP BY falencia.comerca";
 $rsComarca = $conn->query($query_rsComarca) or die($conn->getError());
 $row_rsComarca = $rsComarca->fetch_assoc();
